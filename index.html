@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetFriends - Login/Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Registro</h2>
+    <form id="register-form">
+        <input type="text" id="username" placeholder="Nome de usuário" required><br>
+        <input type="email" id="email" placeholder="E-mail" required><br>
+        <input type="password" id="password" placeholder="Senha" required><br>
+        <button type="button" onclick="registerUser()">Registrar</button>
+    </form>
+
+    <h2>Login</h2>
+    <form id="login-form">
+        <input type="email" id="login-email" placeholder="E-mail" required><br>
+        <input type="password" id="login-password" placeholder="Senha" required><br>
+        <button type="button" onclick="loginUser()">Entrar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

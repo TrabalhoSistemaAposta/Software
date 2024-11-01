@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetFriends - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Bem-vindo, <span id="username"></span></h2>
+    <p>Créditos Virtuais: <span id="credits"></span></p>
+
+    <h3>Fazer Aposta</h3>
+    <form id="bet-form">
+        <input type="text" id="event" placeholder="Nome do Evento" required><br>
+        <select id="outcome">
+            <option value="win">Vitória</option>
+            <option value="lose">Derrota</option>
+        </select><br>
+        <input type="number" id="amount" placeholder="Quantia" required><br>
+        <button type="button" onclick="placeBet()">Apostar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
