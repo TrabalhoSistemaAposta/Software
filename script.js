@@ -1,3 +1,25 @@
+function loginUser() {
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+
+    fetch('http://localhost/seu_projeto/backend/api.php', { // substitua com a URL correta do backend
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'login', email, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            localStorage.setItem('userId', data.user_id);
+            alert('Login bem-sucedido!');
+            // Redirecionar ou atualizar a página
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => console.error('Erro na requisição:', error));
+}
+
 function registerUser() {
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
